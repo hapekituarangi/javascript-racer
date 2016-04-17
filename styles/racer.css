@@ -1,0 +1,153 @@
+/* ---- Global ---- */
+html {
+	background: url("bg1.jpg") center center no-repeat;
+	background-size: cover;
+	padding-top: 10px;
+	padding-bottom: 200px;
+}
+
+body {
+	text-align: center;
+	 margin-top: 10px;
+	 font-family: "Press Start 2P", cursive;
+	 color: white;
+}
+
+/* ---- Title & Description---- */ 
+.title {
+	width: 500px;
+	height: 80px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.title, strong {
+	color: red;
+}
+
+.title, h1 {
+	font-size: 26px;
+}
+
+.gameInfo {
+	width: 880px;
+	height: 50px;
+	display: inline-block;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+#cup {
+	background: url('images/piston-cup.png') center no-repeat;
+	background-size: contain;
+	width: 100%;
+	height:100px;
+	display: inline-block;
+	margin-top: ;
+}
+
+/* ---- Settings ---- */ 
+
+.gameSettings {
+	width: 650px;
+	border-radius: 10px;
+	display: inline-block;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+.gameSettings select, button{
+	width: 220px;
+  	margin-bottom: 30px;
+    display:inline-block; 
+    font-size: 13px;
+    background-color: #f7f7f7; 
+  	color: black;
+  	padding: 5px;  
+}
+.gameSettings select {
+	font-size: 15px;
+}
+.gameSettings h2 {
+	font-size: 18px;
+}
+.playerKey p {
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+/* ---- Winner Text ---- */
+.hide {
+    display: none;
+}
+/* ---- Race track ---- */
+.track-container {
+   width: 100%;
+  height: 300px;  
+  position: absolute;
+  margin: 20px;
+}
+.racer_table {
+  display:table;
+  margin-right:auto;
+  margin-left:auto;
+  width: 95%;  
+}
+.racer_table td {  
+  display:table-cell;
+  height: 60px;
+  width: 10rem;  
+}
+.race_table, .player1_strip {
+  border-bottom-style: dashed;
+  border-width: 0 0 6px 0;
+  border-bottom-color: #fff;
+}
+.race_table, tr {
+	background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+}
+.finish_line {
+  background: url('images/finish.jpg') center no-repeat;
+  background-size: cover;
+}
+/* ---- Cars ---- */
+.car-1 {
+  background: url('images/red.png') center no-repeat;
+  background-size: contain;
+  
+}
+.car-2 {
+  background: url('images/yellow.png') center no-repeat;
+  background-size: contain;
+}
+.tire {
+	background: url('images/fire-tire.png') center no-repeat;
+	background-size: contain;
+}
+.audio-btn {
+	background: url('mute.png') center no-repeat;
+	background-size: cover;
+	opacity: 0.4;
+	height: 50px;
+	width: 50px;
+	padding: 10px;
+	margin-top: 20px;
+}
+.audio-btn:hover {
+	opacity: 1;
+}
+.audio-btn2 {
+	background: url('unmute.png') center no-repeat;
+	background-size: cover;
+	opacity: 0.4;
+	height: 50px;
+	width: 50px;
+	padding: 10px;
+	margin-top: 20px;
+	position: relative;
+}
+.audio-btn2:hover {
+	opacity: 1;
+}

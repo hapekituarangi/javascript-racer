@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Javascript Racer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <link href="styles/racer.css" rel="stylesheet">
+
+    <script src="jquery.js"></script>
+
+</head>
+
+<body>
+    <audio id="bg-audio" src="racer.mp3" autoplay="autoplay"></audio>
+    <div id="container">
+        <div class="row Title">
+            <h1>JavaScript Drag Racer</h1>
+        <div class = "gameInfo">
+            <p>
+                It's on!! Race your way to eternal glory. <strong>BEWARE</strong> the flaming tires!! First player to the finish line wins the Piston Cup.
+            </p>
+        </div>
+        </div>
+        <div class="gameSettings">
+            <h2> Game Settings</h2>
+            <button id="newGame">Start New Game</button>
+            <select id="distance">
+                <option value="10" selected="">1 km</option>
+                <option value="15">2 km</option>
+                <option value="20">5 km</option>
+            </select>
+        </div>
+    </div>
+    <div class="container playerKey">
+    <div class="row">
+        <div class="twelve columns">
+            <p>
+                Player 1:<br><br>
+                A
+            </p>
+            <p>
+                Player 2:<br><br>
+                L
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="hide" id="racer-wins">
+        <div id="cup"></div>
+        <p>WINNER!! You've won the Piston Cup.</p>
+    </div>
+    <div class="hide" id="recer2_wins"></div>
+    <div class = "track_container">
+        <table class="racer_table">
+            <tr class="strip a"><td></td></tr>
+            <tr class="strip b"><td></td></tr>
+            <tr class="player1_strip">
+                <td class="car-1"></td>         
+            </tr>
+            <tr class="player2_strip">
+                <td class="car-2"></td>              
+            </tr> 
+            <tr class="strip c"><td></td></tr>
+            <tr class="strip d"><td></td></tr>   
+        </table>
+    </div>
+    <div class="container">
+        <div class="row">
+        <button id="audio-btn" class="audio-btn"></button>
+        <button id="audio-btn2" class="audio-btn2"></button>
+        <p>
+            This will be one button soon. Maybe some jQuery.
+        </p>
+        <p>
+            More features coming soon... <br>Tires to move along race track towards racers... <br>Racers move all directions and score board to be added in top corners.
+        </p>
+        <p>
+            annnndd of course......GUNS!!
+        </p>
+        </div>
+    </div>
+    <script src="racer.js"></script>
+</body>
+</html>
