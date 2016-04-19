@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     var distance = 10; //default race track distance = number of cells in table
     var score = 0; //set the starting score
-    var lowVolume = document.getElementById("bg-audio").volume = 0.05; //set background audio volume to low
+    var lowVolume = document.getElementById("bg-audio").volume = 0.06; //set background audio volume to low
     var cars = []; //cars array
     var tires = []; //tires array
     //make array list of row items for use futher down programme
@@ -119,7 +119,8 @@ document.addEventListener("DOMContentLoaded", function() {
         stopTires(intervalID); //stop tires
       }
     }
-    function checkForCollision(car) { //check for car crash with tire, if so send back to start
+
+    function checkForCollision(car) { //check for car crash with tire, if so send car back to start
       for(var car=0; car<cars.length; car++) {
         for(var tire=0; tire<tires.length; tire++) {
           if(cars[car].posX == tires[tire].posX && cars[car].posY == tires[tire].posY) {
@@ -128,7 +129,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
     }    
-
     //check which key activated the eventlistener . If 65(A) move car1 forward. Else if 76(L) move car2 forward
     function checkKeyPressed(e) {        
       if (e.keyCode == "65") {                
@@ -218,6 +218,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function stopTires(id) { //stops tires, needed when player wins
       clearInterval(id);
     } 
+
     //hide winner text
     function hideElem() {
     document.getElementById("racer-wins").style.display = "none"; 
@@ -232,29 +233,40 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('bg-audio').muted = true;
     } 
 
-    // play bg music
+    // play background music
     function musicPlay() {
     document.getElementById('bg-audio').muted = false;
     }
 
-    //add eventlistener when new game started hide winner text
-    var hide = document.getElementById("newGame");
-    hide.addEventListener("click", hideElem, false);
+    //hide mute audio btn and show unmute btn
+    function hideMuteBtn() {
+    document.getElementById("audio-btn").style.display = "none";
+    document.getElementById("audio-btn2").style.display = "inline-block";
+    }
+
+    function showMuteBtn() {
+    document.getElementById("audio-btn2").style.display = "none";
+    document.getElementById("audio-btn").style.display = "inline-block";
+    }
+
     
-    //add eventListener for the 'New Game' button    
+    //add eventListener for the 'New Game' button, hide winner text when new game started   
     var newGameBtn = document.getElementById("newGame");
-    newGameBtn.addEventListener("click", newGame, false); 
+    newGameBtn.addEventListener("click", newGame, false);
+    newGameBtn.addEventListener("click", hideElem, false); 
 
     //add eventListener for the race track distance select panel
     var distanceSelect = document.getElementById("distance");
     distanceSelect.addEventListener("change", changeDistance, false);
 
-    //add EventListener to stop
-    var muteAudio = document.getElementById("audio-btn2")
+    //add EventListener to audio button to mute background music
+    var muteAudio = document.getElementById("audio-btn")
     muteAudio.addEventListener("click", musicStop, false);
+    muteAudio.addEventListener("click", hideMuteBtn, false);
 
-    //add EventListener to stop
-    var unMuteAudio = document.getElementById("audio-btn")
+    //add EventListener to stop audio button 2 to unmute background music
+    var unMuteAudio = document.getElementById("audio-btn2")
     unMuteAudio.addEventListener("click", musicPlay, false);
+    unMuteAudio.addEventListener("click", showMuteBtn, false);
 
 });

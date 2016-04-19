@@ -3,16 +3,14 @@ html {
 	background: url("bg1.jpg") center center no-repeat;
 	background-size: cover;
 	padding-top: 10px;
-	padding-bottom: 200px;
+	padding-bottom: 120px;
 }
-
 body {
 	text-align: center;
 	 margin-top: 10px;
 	 font-family: "Press Start 2P", cursive;
 	 color: white;
 }
-
 /* ---- Title & Description---- */ 
 .title {
 	width: 500px;
@@ -20,15 +18,12 @@ body {
 	display: inline-block;
 	margin-bottom: 10px;
 }
-
 .title, strong {
 	color: red;
 }
-
 .title, h1 {
 	font-size: 26px;
 }
-
 .gameInfo {
 	width: 880px;
 	height: 50px;
@@ -36,7 +31,11 @@ body {
 	line-height: 20px;
 	font-size: 16px;
 }
-
+#racer-wins {
+	background-size: contain;
+	background: rgb(0, 0, 0);
+    background: rgba(1, 0, 0, 0.7);
+}
 #cup {
 	background: url('images/piston-cup.png') center no-repeat;
 	background-size: contain;
@@ -45,9 +44,7 @@ body {
 	display: inline-block;
 	margin-top: ;
 }
-
 /* ---- Settings ---- */ 
-
 .gameSettings {
 	width: 650px;
 	border-radius: 10px;
@@ -55,11 +52,12 @@ body {
 	text-align: center;
 	padding-left: 15px;
 	padding-right: 15px;
-	
+	margin-top: 20px;
 }
 .gameSettings select, button{
 	width: 220px;
-  	margin-bottom: 30px;
+	margin-top: 10px;
+  	margin-bottom: 20px;
     display:inline-block; 
     font-size: 13px;
     background-color: #f7f7f7; 
@@ -116,7 +114,6 @@ body {
 .car-1 {
   background: url('images/red.png') center no-repeat;
   background-size: contain;
-  
 }
 .car-2 {
   background: url('images/yellow.png') center no-repeat;
@@ -126,7 +123,7 @@ body {
 	background: url('images/fire-tire.png') center no-repeat;
 	background-size: contain;
 }
-.audio-btn {
+#audio-btn {
 	background: url('mute.png') center no-repeat;
 	background-size: cover;
 	opacity: 0.4;
@@ -135,10 +132,10 @@ body {
 	padding: 10px;
 	margin-top: 20px;
 }
-.audio-btn:hover {
+#audio-btn:hover {
 	opacity: 1;
 }
-.audio-btn2 {
+#audio-btn2 {
 	background: url('unmute.png') center no-repeat;
 	background-size: cover;
 	opacity: 0.4;
@@ -147,7 +144,11 @@ body {
 	padding: 10px;
 	margin-top: 20px;
 	position: relative;
+	display: none;
 }
-.audio-btn2:hover {
+#audio-btn2:hover {
 	opacity: 1;
+}
+.footer {
+	margin-top: 80px;
 }
